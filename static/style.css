@@ -1,0 +1,139 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.result {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #ecf0f1;
+    border-left: 5px solid #3498db;
+    border-radius: 10px;
+}
+
+.result h2 {
+    margin-top: 0;
+    color: #34495e;
+}
+
+.result p, .result li {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+a.logout {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #e74c3c;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+a.logout:hover {
+    color: #c0392b;
+}
+
+.auth-form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.auth-form a {
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+    color: #3498db;
+    text-decoration: none;
+}
+
+.auth-form a:hover {
+    text-decoration: underline;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 30px 0 30px;
+}
+
+.header a.logout {
+    color: #e74c3c;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.header a.logout:hover {
+    color: #c0392b;
+}

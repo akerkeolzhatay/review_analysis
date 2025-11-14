@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Review Analysis</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="header">
+    <a class="logout" href="/logout">Logout</a>
+</div>
+
+<div class="container">
+    <h1>Review Classification</h1>
+
+    <form method="POST">
+        <textarea name="review" placeholder="Enter review here..." required></textarea>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if review %}
+    <div class="result">
+        <h2>Binary Classification</h2>
+        <p><b>Sentiment:</b> {{ b_label }}</p>
+        <p><b>Probability:</b> {{ "%.2f"|format(b_proba) }}</p>
+
+        <h2>Multiclass (Star Rating)</h2>
+        <p><b>Predicted Stars:</b> {{ m_star }}</p>
+        <ul>
+            {% for p in m_probs %}
+            <li>{{ loop.index }} stars → {{ "%.4f"|format(p) }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Multilabel Categories</h2>
+        <p><b>Top Categories:</b> {{ ml_labels|join(', ') }}</p>
+        <ul>
+            {% for i in range(ml_classes|length) %}
+            <li>{{ ml_classes[i] }} → {{ "%.4f"|format(ml_probs[i]) }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>

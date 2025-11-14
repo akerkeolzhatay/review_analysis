@@ -1,0 +1,13 @@
+flask
+flask-login
+pymongo[srv]
+dnspython
+werkzeug
+scikit-learn
+numpy
+pandas
+joblib
+nltk
+xgboost
+lightgbm
+catboost
