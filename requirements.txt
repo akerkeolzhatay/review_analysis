@@ -1,6 +1,6 @@
 flask
 flask-login
-pymongo[srv]
+pymongo
 dnspython
 werkzeug
 scikit-learn
